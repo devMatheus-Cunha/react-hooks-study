@@ -23,10 +23,10 @@ $ git clone https://github.com/devMatheus-Gomes/ui-clone-twitter.git
 $ cd ui-clone-twitter
 To start it, follow the steps below:
 
-# Install the dependencies
+### Install the dependencies
 
 $ npm i
 
-# Start the project
+### Start the project
 
 $ npm start
