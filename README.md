@@ -21,7 +21,7 @@ Clone the project and access the project folder.
 
 ```bash
 $ git clone https://github.com/devMatheus-Gomes/react-hooks-study.git
-$ cd letmeask
+$ cd react-hooks-study
 ```
 
 To start it, follow the steps below:
