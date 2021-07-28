@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 
 // hooks
 import UseState from './hooks/UseState';
