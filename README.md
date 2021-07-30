@@ -9,6 +9,7 @@ Project made for study of all hooks showing in practice why to use it and its fu
 - [x] useState
 - [x] useEffect
 - [x] useContext
+- [x] useReducer 
 - [x] useCallback
 - [x] useMeMo
 - [x] useRef 
