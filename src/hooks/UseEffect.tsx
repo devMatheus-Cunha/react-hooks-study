@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export function UseEffect() {
+export default function UseEffect() {
   // state
   const [counter, setCounter] = useState(0);
 
