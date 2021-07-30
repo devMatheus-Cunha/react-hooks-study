@@ -5,13 +5,15 @@ import "./App.css";
 import UseState from "./hooks/UseState";
 import UseEffect from "./hooks/UseEffect";
 import UseContext from "./hooks/UseContext";
+import UseReducer from "./hooks/useReducer";
 
 function App() {
   return (
     <>
       {/* <UseState /> */}
       {/* <UseEffect /> */}
-      <UseContext />
+      {/* <UseContext /> */}
+      <UseReducer />
     </>
   );
 }
