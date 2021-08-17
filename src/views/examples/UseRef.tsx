@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseRef = (props) => {
+const UseRef = (props:any) => {
     return (
         <div className="UseRef">
             <PageTitle

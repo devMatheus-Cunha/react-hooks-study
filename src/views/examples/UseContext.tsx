@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseContext = (props) => {
+const UseContext = (props:any) => {
     return (
         <div className="UseContext">
             <PageTitle

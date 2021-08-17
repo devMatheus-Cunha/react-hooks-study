@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseEffect = (props) => {
+const UseEffect = (props:any) => {
     return (
         <div className="UseEffect">
             <PageTitle

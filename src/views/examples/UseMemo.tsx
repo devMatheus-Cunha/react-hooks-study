@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseMemo = (props) => {
+const UseMemo = (props:any) => {
     return (
         <div className="UseMemo">
             <PageTitle

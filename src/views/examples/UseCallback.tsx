@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseCallback = (props) => {
+const UseCallback = (props: any) => {
     return (
         <div className="UseCallback">
             <PageTitle

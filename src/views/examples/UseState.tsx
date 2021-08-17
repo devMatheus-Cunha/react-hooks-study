@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseState = (props) => {
+const UseState = (props:any) => {
     return (
         <div className="UseState">
             <PageTitle
