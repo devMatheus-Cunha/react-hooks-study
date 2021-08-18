@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseReducer = (props:any) => {
+export const UseReducer = (props:any) => {
     return (
         <div className="UseReducer">
             <PageTitle
@@ -12,4 +12,3 @@ const UseReducer = (props:any) => {
     )
 }
 
-export default UseReducer

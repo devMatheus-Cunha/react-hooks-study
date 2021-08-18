@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseContext = (props:any) => {
+export const UseContext = (props:any) => {
     return (
         <div className="UseContext">
             <PageTitle
@@ -12,4 +12,3 @@ const UseContext = (props:any) => {
     )
 }
 
-export default UseContext

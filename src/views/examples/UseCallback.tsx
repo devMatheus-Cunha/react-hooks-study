@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseCallback = (props: any) => {
+export const UseCallback = (props: any) => {
     return (
         <div className="UseCallback">
             <PageTitle
@@ -12,4 +12,3 @@ const UseCallback = (props: any) => {
     )
 }
 
-export default UseCallback

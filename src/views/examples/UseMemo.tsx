@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseMemo = (props:any) => {
+export const UseMemo = (props:any) => {
     return (
         <div className="UseMemo">
             <PageTitle
@@ -11,5 +11,3 @@ const UseMemo = (props:any) => {
         </div>
     )
 }
-
-export default UseMemo
