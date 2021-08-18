@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+
+// component 
 import PageTitle from "../../components/layout/PageTitle";
 import SectionTitle from "../../components/layout/SectionTitle";
 
-const UseState = (props: any) => {
+export const UseState = (props: any) => {
   const [count, setCount] = useState(0);
   const [name, setName] = useState("inicial");
 
@@ -41,5 +43,3 @@ const UseState = (props: any) => {
     </div>
   );
 };
-
-export default UseState;
