@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, MutableRefObject } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PageTitle from "../../components/layout/PageTitle";
 
 import SectionTitle from "../../components/layout/SectionTitle";
@@ -10,6 +10,12 @@ export const UseRef = (props: any) => {
   const count = useRef(0);
   const myInputOne = useRef<any>(null);
   const myInputTwo = useRef<any>(null);
+
+  const merge = function(s1: any, s2: any){
+    return [...s1].map((e, i) => {
+      return `${e}${s2[i] || ""}`
+    }).join("")
+  }
 
   useEffect(() => {
     count.current = count.current + 1;
@@ -31,7 +37,7 @@ export const UseRef = (props: any) => {
 
       <div className="center">
         <h1>
-          Valor: <span className="red">{valueOne}</span>
+          Valor: <span className="red">{merge(valueOne, valueTwo)}</span>
         </h1>
         <h1>
           Contador: <span className="red">{count.current}</span>
