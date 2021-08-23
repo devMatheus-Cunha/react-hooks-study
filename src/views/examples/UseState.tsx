@@ -5,6 +5,7 @@ import PageTitle from "../../components/layout/PageTitle";
 import SectionTitle from "../../components/layout/SectionTitle";
 
 export const UseState = (props: any) => {
+  // states
   const [count, setCount] = useState(0);
   const [name, setName] = useState("inicial");
 

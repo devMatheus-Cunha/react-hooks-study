@@ -5,9 +5,11 @@ import SectionTitle from "../../components/layout/SectionTitle";
 import PageTitle from "../../components/layout/PageTitle";
 
 export const UseRef = (props: any) => {
+  // states
   const [valueOne, setValueOne] = useState("");
   const [valueTwo, setValueTwo] = useState("");
 
+  // useRef
   const count = useRef(0);
   const myInputOne = useRef<any>(null);
   const myInputTwo = useRef<any>(null);
@@ -18,6 +20,7 @@ export const UseRef = (props: any) => {
     }).join("")
   }
 
+  // useEffect
   useEffect(() => {
     count.current = count.current + 1;
     myInputTwo.current.focus()
