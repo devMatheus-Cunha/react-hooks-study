@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import PageTitle from "../../components/layout/PageTitle";
 
+// component
 import SectionTitle from "../../components/layout/SectionTitle";
+import PageTitle from "../../components/layout/PageTitle";
 
 export const UseRef = (props: any) => {
   const [valueOne, setValueOne] = useState("");
