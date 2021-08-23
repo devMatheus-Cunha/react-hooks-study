@@ -5,12 +5,13 @@ import PageTitle from "../../components/layout/PageTitle";
 import SectionTitle from "../../components/layout/SectionTitle";
 
 export const UseEffect = (props: any) => {
+  // state
   const [number, setNumber] = useState(1);
   const [fatorial, setFatorial] = useState(1);
-
   const [numberEenAndOdd, setNumberEenAndOdd] = useState(0);
   const [evenAndOdd, setEvenAndOdd] = useState("");
 
+  // functionc
   function calcFatorial(params: any) {
     if (params < 0) {
       return -1;
@@ -26,6 +27,7 @@ export const UseEffect = (props: any) => {
     setEvenAndOdd(value % 2 === 0 ? "Par" : "Ímpar");
   }
 
+  // useEffect
   useEffect(() => {
     calcFatorial(number);
     handleEvenAndOdd(numberEenAndOdd);
