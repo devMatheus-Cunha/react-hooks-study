@@ -5,10 +5,12 @@ import SectionTitle from "../../components/layout/SectionTitle";
 import PageTitle from "../../components/layout/PageTitle";
 
 export const UseMemo = (props: any) => {
+  // state
   const [n1, setN1] = useState<any>(0);
   const [n2, setN2] = useState<any>(0);
   const [n3, setN3] = useState<any>(0);
 
+  // function
   function sum(a: any, b: any) {
     const future = Date.now() + 2000;
     while (Date.now() < future) {}
@@ -17,7 +19,7 @@ export const UseMemo = (props: any) => {
 
   // whith useMeMo
   const resultMeMo = useMemo(() => sum(n1, n2), [n1, n2]);
-  
+
   // whith useEffect and useState
   const [resultState, setResultState] = useState<any>(0);
   useEffect(() => {
