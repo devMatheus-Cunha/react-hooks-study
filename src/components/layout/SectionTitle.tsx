@@ -1,5 +1,7 @@
-import "./SectionTitle.scss";
 import React from "react";
+
+// styles
+import "./SectionTitle.scss";
 
 const SectionTitle = (props: any) => (
   <div className="SectionTitle">

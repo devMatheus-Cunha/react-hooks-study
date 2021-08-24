@@ -1,5 +1,7 @@
-import './PageTitle.scss'
 import React from 'react'
+
+//styles
+import './PageTitle.scss'
 
 const PageTitle = (props: any) => (
     <div className={`PageTitle ${props.error ? "error" : ""}`}>

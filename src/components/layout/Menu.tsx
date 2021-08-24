@@ -1,7 +1,9 @@
 import React from 'react'
-import './Menu.scss'
 
 import { Link } from 'react-router-dom'
+
+// styles
+import './Menu.scss'
 
 const Menu = (props: any) => (
     <aside className="Menu">

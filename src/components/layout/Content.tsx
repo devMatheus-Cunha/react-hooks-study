@@ -1,7 +1,7 @@
 import { Switch, Route } from "react-router-dom";
-import "./Content.scss";
 import React from "react";
 
+// components
 import { Home } from "../../views/examples/Home";
 import { NotFound } from "../../views/examples/NotFound";
 import { UseState } from "../../views/examples/UseState";
@@ -12,6 +12,9 @@ import { UseMemo } from "../../views/examples/UseMemo";
 import { UseContext } from "../../views/examples/UseContext";
 import { UseReducer } from "../../views/examples/UseReducer";
 import { UseCustom } from "../../views/examples/UseCustom";
+
+// styles
+import "./Content.scss";
 
 const Content = (props: any) => (
   <main className="Content">
