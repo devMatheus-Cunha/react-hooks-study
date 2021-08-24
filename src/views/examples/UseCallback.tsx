@@ -7,10 +7,12 @@ import SectionTitle from "../../components/layout/SectionTitle";
 export const UseCallback = (props: any) => {
   const [count, setCount] = useState(0);
 
+  // avoid multiple rendering when calling the function and is recommended when passing functions to children
   const handleInc = useCallback((delta) => {
     setCount((prevent) => prevent + delta);
   }, []);
 
+  // render test
   console.log("render...");
   
   return (
