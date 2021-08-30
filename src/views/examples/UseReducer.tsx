@@ -3,7 +3,7 @@ import React from 'react'
 // components
 import PageTitle from '../../components/layout/PageTitle'
 
-export const UseReducer = (props:any) => {
+export const UseReducer = () => {
     return (
         <div className="UseReducer">
             <PageTitle

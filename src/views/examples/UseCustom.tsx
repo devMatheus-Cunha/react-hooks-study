@@ -3,7 +3,7 @@ import React from 'react'
 // components
 import PageTitle from '../../components/layout/PageTitle'
 
-export const UseCustom = (props:any) => {
+export const UseCustom = () => {
     return (
         <div className="UseCustom">
             <PageTitle

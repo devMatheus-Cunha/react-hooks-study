@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-export const Home = (props:any) => (
+export const Home = () => (
     <div className="Home">
         <PageTitle
             title="Módulo Hooks"

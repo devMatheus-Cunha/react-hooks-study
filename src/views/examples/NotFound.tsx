@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-export const NotFound = (props:any) => (
+export const NotFound = () => (
     <div className="Home">
         <PageTitle error
             title="404"
