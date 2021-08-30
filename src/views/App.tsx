@@ -4,20 +4,23 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 // Context
 import DataContext, { data } from "../data/DataContext";
+import ContexStore from "../data/ContexStore";
 
-// components
+// Components
 import Menu from "../components/layout/Menu";
 import Content from "../components/layout/Content";
 
 const App = () => {
   return (
     <div className="App">
-      <DataContext.Provider value={data}>
-        <Router>
-          <Menu />
-          <Content />
-        </Router>
-      </DataContext.Provider>
+      <ContexStore>
+        <DataContext.Provider value={data}>
+          <Router>
+            <Menu />
+            <Content />
+          </Router>
+        </DataContext.Provider>
+      </ContexStore>
     </div>
   );
 };
