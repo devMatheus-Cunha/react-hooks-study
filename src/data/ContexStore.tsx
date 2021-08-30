@@ -1,5 +1,6 @@
 import React, { createContext, ReactNode, useState } from "react";
 
+// Inteface
 interface ContextProps {
   children: ReactNode;
 }
@@ -18,6 +19,7 @@ interface IStateProps {
 
 export const AuthContext = createContext({} as IAuthContextProps);
 
+// Function context
 function ContexStore({ children }: ContextProps) {
   const [state, setState] = useState<IStateProps>({
     number: 123,

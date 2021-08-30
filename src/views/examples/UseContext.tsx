@@ -9,6 +9,7 @@ import DataContext from "../../data/DataContext";
 import { AuthContext } from "../../data/ContexStore";
 
 export const UseContext = () => {
+  // Hooks
   const context = useContext(DataContext);
   const { number, setNumber, text } = useContext(AuthContext as any);
 
