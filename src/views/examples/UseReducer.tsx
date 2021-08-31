@@ -4,6 +4,11 @@ import React, { useReducer, useState } from "react";
 import PageTitle from "../../components/layout/PageTitle";
 import SectionTitle from "../../components/layout/SectionTitle";
 
+// store
+import { addNumber, entire, initialState, numberAddTwo, numberMultiplySeven, numberSplitSeven, reducer } from "../../store";
+
+
+
 export const UseReducer = () => {
   const [infoUser] = useState([
     {
@@ -13,31 +18,6 @@ export const UseReducer = () => {
     },
   ]);
 
-  const initialState = {
-    other: [],
-    products: [],
-    user: [],
-    number: 0,
-  };
-
-  function reducer(state: any, action: any) {
-    switch (action.type) {
-      case "numberAddTwo":
-        return { ...state, number: state.number + 2 };
-      case "numberMultiplySeven":
-        return { ...state, number: state.number * 7 };
-      case "numberSplitSeven":
-        return { ...state, number: state.number / 25 };
-      case "entire":
-        return { ...state, number: parseInt(state.number) };
-      case "addNumber":
-        return { ...state, number: state.number + action.ramdomNumber };
-      case "login":
-        return { ...state, user: action.payload };
-      default:
-        return state;
-    }
-  }
   const [state, dispatch] = useReducer(reducer, initialState);
 
   function getRandomInt(min = 0, max = 40) {
@@ -52,7 +32,7 @@ export const UseReducer = () => {
         title="Hook UseReducer"
         subtitle="Uma outra forma de ter estado em componentes funcionais!"
       />
-      {/* <SectionTitle title="Exercicio #01" />
+      <SectionTitle title="Exercicio #01" />
       <div className="center">
         <span className="text">{state.number}</span>
         {state.user.map(({ name, idade, cidade }: any) => (
@@ -64,53 +44,46 @@ export const UseReducer = () => {
             </div>
           </>
         ))}
-        <button
-          className="btn"
-          onClick={() => dispatch({ type: "numberAddTwo" })}
-        >
-          +2
-        </button>
-        <button
-          className="btn"
-          onClick={() => dispatch({ type: "login", payload: infoUser })}
-        >
-          login
-        </button>
+        <div>
+          <button
+            className="btn"
+            onClick={() => dispatch({ type: "numberAddTwo" })}
+          >
+            +2
+          </button>
+          <button
+            className="btn"
+            onClick={() => dispatch({ type: "login", payload: infoUser })}
+          >
+            login
+          </button>
+        </div>
       </div>
-       */}
+
       <SectionTitle title="Exercicio #02" />
       <div className="center">
-      <span className="text">{state.number}</span>
-      <button
-          className="btn"
-          onClick={() => dispatch({ type: "numberAddTwo" })}
-        >
-          +2
-        </button>
-      <button
-          className="btn"
-          onClick={() => dispatch({ type: "numberMultiplySeven" })}
-        >
-          *7
-        </button>
-      <button
-          className="btn"
-          onClick={() => dispatch({ type: "numberSplitSeven" })}
-        >
-          /25
-        </button>
-      <button
-          className="btn"
-          onClick={() => dispatch({ type: "entire" })}
-        >
-          Transformar em inteiro
-        </button>
-      <button
-          className="btn"
-          onClick={() => dispatch({ type: "addNumber", ramdomNumber: getRandomInt(0, 40) })}
-        >
-          Adicionar numero aleatorio de 0 a 40
-        </button>
+        <span className="text">{state.number}</span>
+        <div>
+          {" "}
+          <button className="btn" onClick={() => numberAddTwo(dispatch)}>
+            +2
+          </button>
+          <button className="btn" onClick={() => numberMultiplySeven(dispatch)}>
+            *7
+          </button>
+          <button className="btn" onClick={() => numberSplitSeven(dispatch)}>
+            /25
+          </button>
+          <button className="btn" onClick={() => entire(dispatch)}>
+            Transformar em inteiro
+          </button>
+          <button
+            className="btn"
+            onClick={() =>  addNumber(dispatch,  getRandomInt(0, 40))}
+          >
+            Adicionar numero aleatorio de 0 a 40
+          </button>
+        </div>
       </div>
     </div>
   );
