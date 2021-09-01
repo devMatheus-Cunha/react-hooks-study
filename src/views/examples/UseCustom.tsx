@@ -6,9 +6,21 @@ import SectionTitle from "../../components/layout/SectionTitle";
 
 // Hooks
 import { useCounter } from "../../hooks/useCounter";
+import { useFetch } from "../../hooks/useFetch";
 
 export const UseCustom = () => {
-  const [count, inc, dec ] = useCounter();
+  const [count, inc, dec] = useCounter();
+  const url = "http://files.cod3r.com.br/curso-react/estados.json";
+
+  const states = useFetch(url);
+
+  function showStates(states: any) {
+    return states.map(({ nome, sigla }: any) => (
+      <li key={nome}>
+        {nome} - {sigla}
+      </li>
+    ));
+  }
 
   return (
     <div className="UseCustom">
@@ -27,6 +39,12 @@ export const UseCustom = () => {
             +1
           </button>
         </div>
+      </div>
+      <SectionTitle title="Exercicio #02" />
+      <div className="center">
+        <ul>
+            {states.data ? showStates(states.data) : "Nenhum dado"}
+        </ul>
       </div>
     </div>
   );
