@@ -7,8 +7,6 @@ import SectionTitle from "../../components/layout/SectionTitle";
 // store
 import { addNumber, entire, initialState, numberAddTwo, numberMultiplySeven, numberSplitSeven, reducer } from "../../store";
 
-
-
 export const UseReducer = () => {
   const [infoUser] = useState([
     {
@@ -18,8 +16,10 @@ export const UseReducer = () => {
     },
   ]);
 
+  // reducer
   const [state, dispatch] = useReducer(reducer, initialState);
-
+  
+  // functions
   function getRandomInt(min = 0, max = 40) {
     min = Math.ceil(min);
     max = Math.floor(max);

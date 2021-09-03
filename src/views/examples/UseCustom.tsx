@@ -9,11 +9,14 @@ import { useCounter } from "../../hooks/useCounter";
 import { useFetch } from "../../hooks/useFetch";
 
 export const UseCustom = () => {
+
+  // my hooks
   const [count, inc, dec] = useCounter();
   const url = "http://files.cod3r.com.br/curso-react/estados.json";
-
   const states = useFetch(url);
 
+
+  // functions
   function showStates(states: any) {
     return states.map(({ nome, sigla }: any) => (
       <li key={nome}>
